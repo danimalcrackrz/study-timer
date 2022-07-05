@@ -1,0 +1,41 @@
+.timer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 8rem;
+  width: 500px;
+  height: 500px;
+  color: var(--text-color);
+  border-radius: 1rem;
+  background: #1f2633;
+  box-shadow: var(--shadow);
+  .timer-container {
+    display: flex;
+    .timer-adjustment {
+      position: absolute;
+      top: 3rem;
+      right: 1rem;
+      display: flex;
+      font-size: 4rem;
+      padding: 1rem;
+    }
+  }
+  .timer-contents {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30%;
+    .timer-input {
+      font-size: 1rem;
+    }
+    .timer-btn {
+      padding: 1rem;
+      font-size: 1.25rem;
+      border: none;
+      border-radius: 1rem;
+    }
+  }
+}

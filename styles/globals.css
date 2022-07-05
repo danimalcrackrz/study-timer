@@ -14,3 +14,18 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --bg-color: #131723;
+  --text-color: #00daf7;
+  --shadow: 0px 0px 15px 1px #000000;
+}
+
+.timer-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
