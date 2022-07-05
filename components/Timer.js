@@ -6,6 +6,8 @@ const Timer = () => {
   const [isRunning, setIsRunning] = useState(false)
   const [time, setTime] = useState(60)
 
+  let interval
+
   useEffect(() => {
     if (isRunning) {
       const interval = setInterval(() => {
@@ -23,6 +25,12 @@ const Timer = () => {
     }
   }, [isRunning])
 
+  const handleReset = () => {
+    setTime(60)
+    setIsRunning(false)
+    clearInterval(interval)
+  }
+
   return (
     <div className='timer'>
       <div className='timer-container'>
@@ -33,8 +41,14 @@ const Timer = () => {
         </div>
       </div>
       <div className='timer-contents'>
-        <button className='timer-btn' onClick={() => setIsRunning(!isRunning)}>
+        <button
+          className={isRunning ? "timer-btn running" : "timer-btn"}
+          onClick={() => setIsRunning(!isRunning)}
+        >
           {isRunning ? "Pause Timer" : "Start Timer"}
+        </button>
+        <button className='timer-btn' onClick={handleReset}>
+          Reset Timer
         </button>
       </div>
     </div>
